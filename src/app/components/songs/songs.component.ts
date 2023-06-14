@@ -57,7 +57,7 @@ export class SongsComponent implements OnInit {
   ngOnInit() { }
 
   goToSongDetail(song: Song) {
-    this.router.navigate(['/songs/' + song.id], { queryParams: { title: song.title, html: song.body } })
+    this.router.navigate(['/songs/' + song.nro], { queryParams: { title: song.title, html: song.body } })
   }
 
   filter(event) {

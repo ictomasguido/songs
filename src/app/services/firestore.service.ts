@@ -9,6 +9,6 @@ export class FirestoreService {
   constructor(private firestore: AngularFirestore) { }
 
   getSongs() {
-    return this.firestore.collection<any>('songs', ref => ref.orderBy('title', 'asc'))
+    return this.firestore.collection<any>('songs', ref => ref.orderBy('nro', 'asc'))
   }
 }
