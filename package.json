@@ -2,7 +2,7 @@
   "name": "songs-church",
   "version": "0.0.1",
   "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "homepage": "https://ictomasguido-songs.netlify.app/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
