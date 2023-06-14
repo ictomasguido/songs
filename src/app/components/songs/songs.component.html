@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-title>Listado de Canciones</ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar (ionInput)="filter($event)"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-header collapse="condense">
+    <ion-toolbar hidden>
+    </ion-toolbar>
+  </ion-header>
+  <ion-list>
+      <ion-item *ngFor="let song of songs" (click)=goToSongDetail(song)>
+        <ion-label>
+          <h2>{{ song.title }}</h2>
+          <p>{{ song.body }}</p>
+        </ion-label>
+      </ion-item>
+  </ion-list>
+
+</ion-content>
+<!-- <app-songs-details *ngIf="this.html" [html]="html"></app-songs-details> -->
+
+

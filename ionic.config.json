@@ -1,0 +1,7 @@
+{
+  "name": "songs-church",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

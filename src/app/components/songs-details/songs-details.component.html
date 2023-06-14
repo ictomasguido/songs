@@ -1,0 +1,77 @@
+<!-- <ion-content scroll-y="false">
+  <virtual-scroll-element class="ion-content-scroll-host">
+  </virtual-scroll-element>
+  <ion-infinite-scroll>
+    <ion-infinite-scroll-content>
+      <h2>Title</h2>
+      <ion-text color="dark">
+        <h5> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+          standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+          a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+          Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+          of Lorem Ipsum.
+        </h5>
+      </ion-text>
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content> -->
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar hidden>
+    </ion-toolbar>
+  </ion-header>
+  <ion-card>
+    <ion-card-header>
+      <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
+      <ion-card-title>{{title}}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content class="ion-text-justify" [style.fontSize.px]="fontSizeVariable">
+      <div [innerHTML]="html" style="text-align: center;">
+
+      </div>
+    </ion-card-content>
+  </ion-card>
+  <!-- <ion-title>Lorem Title</ion-title>
+  <ion-text color="dark">
+    <h5> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+      standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+      a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+      remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+      Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+      of Lorem Ipsum.
+    </h5>
+  </ion-text> -->
+  <!-- <ion-fab slot="fixed" vertical="bottom" horizontal="end" (click)="set($event)">
+    <ion-fab-button>
+      <ion-icon name="chevron-up-circle"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button>
+        <ion-icon name="add-outline"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button>
+        <ion-icon name="remove-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab> -->
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button (click)="more()">
+      <ion-icon name="add-outline"></ion-icon>
+    </ion-fab-button>
+    <br>
+    <ion-fab-button (click)="sub()">
+      <ion-icon name="remove-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
